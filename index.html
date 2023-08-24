@@ -20,8 +20,18 @@
                 max-height: 200px;
             }
         </style>
+        <script>
+            function rotate() {
+                angle = 0
+                setInterval(() => {
+                    imagem = document.querySelector('.imagem')
+                    angle = angle + 1
+                    imagem.style.transform = `rotate(${angle}deg)`  
+                }, 10)
+            }
+        </script>
     </head>
-    <body>
+    <body onload="rotate()">
         <div class="caixa">
             <p class="corzinha">
                 Hello, Black!
